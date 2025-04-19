@@ -1,0 +1,233 @@
+:root {
+  --color1: #3f2a53;
+  --color2: #75619d;
+  --color3: #beaedb;
+  --color4: #e6eff8;
+  --textColours: #000000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--color4);
+  color: var(--textColours);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-weight: bolder;
+  background-color: var(--color4);
+  font-size: x-large;
+}
+
+main {
+  flex: 1;
+}
+
+.h-entry h1 {
+  color: var(--color1);
+}
+
+.summary {
+  align-items: center;
+  font-style: italic;
+}
+
+.quote {
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+}
+
+.blogContainer {
+  gap: 20px;
+  padding: 30px;
+  max-width: fit-content;
+  margin: auto;
+  background-color: var(--color4);
+  box-shadow: #000000;
+}
+
+.h-entry {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.u-photo {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.figure {
+  max-width: 500px;
+}
+
+.postTitle {
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: var(--color3);
+}
+
+.paragraphs {
+  font-size: 16px;
+}
+
+.returnButton {
+  color: var(--color4);
+}
+
+footer {
+  display: flex;
+  background-color: var(--color1);
+  color: var(--color4);
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.copyright {
+  font-size: small;
+}
+
+.u-url {
+  color: var(--color2);
+  font-style: italic;
+}
+
+/* NAV BAR LIST */
+.nav-u-url {
+  color: var(--color1);
+  font-size: medium;
+}
+
+.navLinks ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  top: 2px;
+  text-transform: uppercase;
+}
+
+.navLinks ul li a:hover {
+  color: var(--textColours);
+  font-size: large;
+}
+
+.navLinks ul li a .active {
+  color: var(--color4);
+}
+/* NAV BAR BUTTONS */
+
+.navLinks button {
+  background: var(--color4);
+  color: var(--textColours);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.navLinks button:hover {
+  color: var(--color4);
+  background-color: var(--color2);
+  font-weight: 400;
+}
+
+.navLinks button.active {
+  color: var(--color4);
+  background-color: var(--color2);
+  font-weight: bold;
+}
+
+/* RESPONSIVE STUFF */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    font-size: large;
+  }
+
+  .navLinks ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .blogContainer {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .u-photo {
+    width: 100%;
+  }
+
+  .figure {
+    max-width: 100%;
+  }
+
+  .postTitle {
+    font-size: medium;
+  }
+
+  .paragraphs {
+    font-size: 14px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navLinks button {
+    font-size: medium;
+    padding: 8px 12px;
+  }
+
+  .quote {
+    font-size: medium;
+    text-align: center;
+  }
+
+  .summary {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: medium;
+  }
+
+  .navLinks ul {
+    gap: 8px;
+  }
+
+  .postTitle {
+    font-size: small;
+  }
+
+  .paragraphs {
+    font-size: 13px;
+  }
+}

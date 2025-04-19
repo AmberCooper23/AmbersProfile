@@ -1,0 +1,218 @@
+:root {
+  --color1: #3f2a53;
+  --color2: #75619d;
+  --color3: #beaedb;
+  --color4: #e6eff8;
+  --textColours: #000000;
+}
+
+/* === GLOBAL STYLES === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--color4);
+  color: var(--textColours);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* === HEADER === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--color4);
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/* === NAVIGATION === */
+.navLinks ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.navLinks ul li a:hover {
+  color: var(--textColours);
+  font-size: large;
+}
+
+.navLinks ul li a .active {
+  color: var(--color4);
+}
+
+.navLinks button {
+  background: var(--color4);
+  color: var(--textColours);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.navLinks button:hover {
+  color: var(--color4);
+  background-color: var(--color2);
+  font-weight: 400;
+}
+
+.navLinks button.active {
+  color: var(--color4);
+  background-color: var(--color2);
+  font-weight: bold;
+}
+
+/* === MAIN SECTION === */
+main {
+  flex: 1;
+}
+
+/* === IMAGE GRID === */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.image-grid li {
+  width: 100%;
+  height: 200px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === PROFILE SECTION === */
+.profileContainer {
+  display: flex;
+  gap: 2rem;
+  max-width: fit-content;
+  margin: auto;
+}
+
+.profileProfileImg {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 100%;
+}
+
+.profile {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+
+.profileTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.u-photo {
+  max-width: 250px;
+}
+
+.u-url {
+  color: var(--color2);
+  font-style: italic;
+}
+
+/* === CONTAINERS & LAYOUT === */
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 30px;
+  max-width: fit-content;
+  margin: auto;
+  background-color: var(--color4);
+}
+
+.myWork {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* === TEXT ELEMENTS === */
+.description {
+  font-size: large;
+  font-weight: 400;
+  color: var(--textColours);
+}
+
+.title {
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: var(--color3);
+}
+
+.DownloadButton {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.DownloadButton:hover {
+  color: var(--color2);
+}
+
+/* === FOOTER === */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color1);
+  color: var(--color4);
+  padding: 15px 30px;
+}
+
+.copyright {
+  font-size: small;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 7rem;
+  }
+
+  .profileContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

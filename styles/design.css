@@ -1,0 +1,196 @@
+:root {
+  --color1: #3f2a53;
+  --color2: #75619d;
+  --color3: #beaedb;
+  --color4: #e6eff8;
+  --textColours: #000000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--color4);
+  color: var(--textColours);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  font-weight: bolder;
+  background-color: var(--color4);
+  font-size: x-large;
+}
+
+main {
+  flex: 1;
+}
+
+/* NAV BAR LIST */
+.nav-u-url {
+  color: var(--color1);
+  font-size: medium;
+}
+
+.navLinks ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  top: 2px;
+  text-transform: uppercase;
+}
+
+.navLinks ul li a:hover {
+  color: var(--textColours);
+  font-size: large;
+}
+
+.navLinks ul li a .active {
+  color: var(--color4);
+}
+/* NAV BAR BUTTONS */
+
+.navLinks button {
+  background: var(--color4);
+  color: var(--textColours);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.navLinks button:hover {
+  color: var(--color4);
+  background-color: var(--color2);
+  font-weight: 400;
+}
+
+.navLinks button.active {
+  color: var(--color4);
+  background-color: var(--color2);
+  font-weight: bold;
+}
+
+.designContainer {
+  gap: 20px;
+  padding: 30px;
+  max-width: fit-content;
+  margin: auto;
+  background-color: var(--color4);
+}
+
+.designTitle {
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: var(--color3);
+}
+
+.h-entry {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.u-photo {
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.paragraphs {
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  background-color: var(--color1);
+  color: var(--color4);
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.copyright {
+  font-size: small;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: large;
+    padding: 15px;
+  }
+
+  .navLinks ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navLinks button {
+    font-size: medium;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .designContainer {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .u-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .paragraphs {
+    font-size: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: medium;
+  }
+
+  .nav-u-url {
+    font-size: small;
+  }
+
+  .navLinks button {
+    font-size: small;
+    padding: 8px;
+  }
+
+  .designTitle {
+    font-size: medium;
+  }
+
+  .paragraphs {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: x-small;
+  }
+}
