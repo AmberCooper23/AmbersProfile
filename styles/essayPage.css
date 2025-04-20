@@ -1,9 +1,9 @@
 :root {
-  --color1: #3f2a53;
-  --color2: #75619d;
-  --color3: #beaedb;
-  --color4: #e6eff8;
   --textColours: #000000;
+  --headings: #E0BB20;
+  --text: white;
+  --background: black;
+  --container: #A1A1A1;
 }
 
 html,
@@ -14,8 +14,8 @@ body {
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: var(--color4);
-  color: var(--textColours);
+  background-color: var(--background);
+  color: var(--white);
   margin: 0;
   padding: 0;
   display: flex;
@@ -26,7 +26,8 @@ body {
   justify-content: space-between;
   padding: 15px 30px;
   font-weight: bolder;
-  background-color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   font-size: x-large;
 }
 
@@ -36,7 +37,6 @@ main {
 
 /* NAV BAR LIST */
 .nav-u-url {
-  color: var(--color1);
   font-size: medium;
 }
 
@@ -55,14 +55,11 @@ main {
   font-size: large;
 }
 
-.navLinks ul li a .active {
-  color: var(--color4);
-}
 /* NAV BAR BUTTONS */
 
 .navLinks button {
-  background: var(--color4);
-  color: var(--textColours);
+  background: var(--background);
+  color: var(--headings);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -71,21 +68,21 @@ main {
 }
 
 .navLinks button:hover {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: 400;
 }
 
 .navLinks button.active {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: bold;
 }
 
 footer {
   display: flex;
-  background-color: var(--color1);
-  color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
@@ -95,26 +92,71 @@ footer {
   font-size: small;
 }
 
+.latestBlog {
+  background-color: var(--background);
+  color: var(--headings);
+}
+
+.designContainer {
+  display: flex;
+}
+
+.designCard {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  margin: 15px;
+}
+
+.thumbnail {
+  width: 45%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.h-feed {
+  gap: 20px;
+  padding: 30px;
+  max-width: fit-content;
+  margin: auto;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px;
     font-size: large;
+    padding: 15px;
   }
 
   .navLinks ul {
     flex-direction: column;
     gap: 10px;
-    width: 100%;
-    padding-top: 10px;
   }
 
   .navLinks button {
     width: 100%;
-    font-size: medium;
     padding: 10px;
-    text-align: left;
+    font-size: medium;
+  }
+
+  .designContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .designCard,
+  .thumbnail {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .h-feed {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   footer {
@@ -123,10 +165,6 @@ footer {
     text-align: center;
     gap: 10px;
     padding: 20px;
-  }
-
-  .copyright {
-    font-size: x-small;
   }
 }
 
@@ -142,5 +180,9 @@ footer {
   .navLinks button {
     font-size: small;
     padding: 8px;
+  }
+
+  .copyright {
+    font-size: x-small;
   }
 }

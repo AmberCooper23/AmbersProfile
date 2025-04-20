@@ -1,9 +1,10 @@
 :root {
-  --color1: #3f2a53;
-  --color2: #75619d;
-  --color3: #beaedb;
-  --color4: #e6eff8;
   --textColours: #000000;
+  --headings: #E0BB20;
+  --text: white;
+  --background: black;
+  --container: #A1A1A1;
+
 }
 
 html,
@@ -14,8 +15,8 @@ body {
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: var(--color4);
-  color: var(--textColours);
+  background-color: var(--background);
+  color: var(--white);
   margin: 0;
   padding: 0;
   display: flex;
@@ -26,7 +27,8 @@ body {
   justify-content: space-between;
   padding: 15px 30px;
   font-weight: bolder;
-  background-color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   font-size: x-large;
 }
 
@@ -35,7 +37,7 @@ main {
 }
 
 .h-entry h1 {
-  color: var(--color1);
+  color: var(--textColours);
 }
 
 .summary {
@@ -55,8 +57,7 @@ main {
   padding: 30px;
   max-width: fit-content;
   margin: auto;
-  background-color: var(--color4);
-  box-shadow: #000000;
+  background-color: var(--background);
 }
 
 .h-entry {
@@ -79,21 +80,18 @@ main {
 .postTitle {
   font-size: large;
   margin-bottom: 10px;
-  background-color: var(--color3);
+  background-color: var(--background);
+  color: var(--headings);
 }
 
 .paragraphs {
   font-size: 16px;
 }
 
-.returnButton {
-  color: var(--color4);
-}
-
 footer {
   display: flex;
-  background-color: var(--color1);
-  color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
@@ -104,13 +102,12 @@ footer {
 }
 
 .u-url {
-  color: var(--color2);
+  color: var(--yellow);
   font-style: italic;
 }
 
 /* NAV BAR LIST */
 .nav-u-url {
-  color: var(--color1);
   font-size: medium;
 }
 
@@ -129,14 +126,11 @@ footer {
   font-size: large;
 }
 
-.navLinks ul li a .active {
-  color: var(--color4);
-}
 /* NAV BAR BUTTONS */
 
 .navLinks button {
-  background: var(--color4);
-  color: var(--textColours);
+  background: var(--background);
+  color: var(--headings);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -145,14 +139,14 @@ footer {
 }
 
 .navLinks button:hover {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: 400;
 }
 
 .navLinks button.active {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: bold;
 }
 

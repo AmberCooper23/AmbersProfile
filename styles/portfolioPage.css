@@ -1,9 +1,9 @@
 :root {
-  --color1: #3f2a53;
-  --color2: #75619d;
-  --color3: #beaedb;
-  --color4: #e6eff8;
   --textColours: #000000;
+  --headings: #E0BB20;
+  --text: white;
+  --background: black;
+  --container: #A1A1A1;
 }
 
 /* === GLOBAL STYLES === */
@@ -12,8 +12,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: var(--color4);
-  color: var(--textColours);
+  background-color: var(--background);
+  color: var(--headings);
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -33,20 +33,99 @@ img {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px 30px;
-  background-color: var(--color4);
   font-weight: bolder;
+  background-color: var(--background);
+  color: var(--headings);
   font-size: x-large;
 }
+ 
+main {
+  flex: 1;
+}
 
-/* === NAVIGATION === */
+.h-entry h1 {
+  color: var(--textColours);
+}
+
+.summary {
+  align-items: center;
+  font-style: italic;
+}
+
+.quote {
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+}
+
+.blogContainer {
+  gap: 20px;
+  padding: 30px;
+  max-width: fit-content;
+  margin: auto;
+  background-color: var(--background);
+}
+
+.h-entry {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.u-photo {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.figure {
+  max-width: 500px;
+}
+
+.postTitle {
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: var(--background);
+  color: var(--headings);
+}
+
+.paragraphs {
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  background-color: var(--background);
+  color: var(--headings);
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.copyright {
+  font-size: small;
+}
+
+.u-url {
+  color: var(--yellow);
+  font-style: italic;
+}
+
+/* NAV BAR LIST */
+.nav-u-url {
+  font-size: medium;
+}
+
 .navLinks ul {
   display: flex;
-  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+  gap: 20px;
+  top: 2px;
   text-transform: uppercase;
 }
 
@@ -55,13 +134,11 @@ img {
   font-size: large;
 }
 
-.navLinks ul li a .active {
-  color: var(--color4);
-}
+/* NAV BAR BUTTONS */
 
 .navLinks button {
-  background: var(--color4);
-  color: var(--textColours);
+  background: var(--background);
+  color: var(--headings);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -70,14 +147,14 @@ img {
 }
 
 .navLinks button:hover {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: 400;
 }
 
 .navLinks button.active {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: bold;
 }
 
@@ -137,7 +214,7 @@ main {
 }
 
 .u-url {
-  color: var(--color2);
+  color: var(--headings);
   font-style: italic;
 }
 
@@ -148,7 +225,6 @@ main {
   padding: 30px;
   max-width: fit-content;
   margin: auto;
-  background-color: var(--color4);
 }
 
 .myWork {
@@ -163,7 +239,7 @@ main {
 .description {
   font-size: large;
   font-weight: 400;
-  color: var(--textColours);
+  color: var(--text);
 }
 
 .title {

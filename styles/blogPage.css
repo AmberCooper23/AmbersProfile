@@ -4,6 +4,12 @@
   --color3: #beaedb;
   --color4: #e6eff8;
   --textColours: #000000;
+
+  --textColours: #000000;
+  --headings: #E0BB20;
+  --text: white;
+  --background: black;
+  --container: #A1A1A1;
 }
 
 html,
@@ -14,8 +20,8 @@ body {
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: var(--color4);
-  color: var(--textColours);
+  background-color: var(--background);
+  color: var(--white);
   margin: 0;
   padding: 0;
   display: flex;
@@ -26,7 +32,8 @@ body {
   justify-content: space-between;
   padding: 15px 30px;
   font-weight: bolder;
-  background-color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   font-size: x-large;
 }
 
@@ -34,9 +41,26 @@ main {
   flex: 1;
 }
 
+footer {
+  display: flex;
+  background-color: var(--background);
+  color: var(--headings);
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.copyright {
+  font-size: small;
+}
+
+.u-url {
+  color: var(--yellow);
+  font-style: italic;
+}
+
 /* NAV BAR LIST */
 .nav-u-url {
-  color: var(--color1);
   font-size: medium;
 }
 
@@ -55,14 +79,11 @@ main {
   font-size: large;
 }
 
-.navLinks ul li a .active {
-  color: var(--color4);
-}
 /* NAV BAR BUTTONS */
 
 .navLinks button {
-  background: var(--color4);
-  color: var(--textColours);
+  background: var(--background);
+  color: var(--headings);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -71,24 +92,15 @@ main {
 }
 
 .navLinks button:hover {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: 400;
 }
 
 .navLinks button.active {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: bold;
-}
-
-footer {
-  display: flex;
-  background-color: var(--color1);
-  color: var(--color4);
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
 }
 
 .copyright {
@@ -96,7 +108,8 @@ footer {
 }
 
 .latestBlog {
-  background-color: var(--color3);
+  background-color: var(--background);
+  color: var(--headings);
 }
 
 .blogContainer {

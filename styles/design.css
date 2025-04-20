@@ -1,9 +1,10 @@
 :root {
-  --color1: #3f2a53;
-  --color2: #75619d;
-  --color3: #beaedb;
-  --color4: #e6eff8;
   --textColours: #000000;
+  --headings: #E0BB20;
+  --text: white;
+  --background: black;
+  --container: #A1A1A1;
+
 }
 
 html,
@@ -26,7 +27,8 @@ body {
   justify-content: space-between;
   padding: 15px 30px;
   font-weight: bolder;
-  background-color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   font-size: x-large;
 }
 
@@ -36,7 +38,6 @@ main {
 
 /* NAV BAR LIST */
 .nav-u-url {
-  color: var(--color1);
   font-size: medium;
 }
 
@@ -55,14 +56,11 @@ main {
   font-size: large;
 }
 
-.navLinks ul li a .active {
-  color: var(--color4);
-}
 /* NAV BAR BUTTONS */
 
 .navLinks button {
-  background: var(--color4);
-  color: var(--textColours);
+  background: var(--background);
+  color: var(--headings);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -71,14 +69,14 @@ main {
 }
 
 .navLinks button:hover {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: 400;
 }
 
 .navLinks button.active {
-  color: var(--color4);
-  background-color: var(--color2);
+  color: var(--background);
+  background-color: var(--headings);
   font-weight: bold;
 }
 
@@ -87,13 +85,14 @@ main {
   padding: 30px;
   max-width: fit-content;
   margin: auto;
-  background-color: var(--color4);
+  background-color: var(--background);
 }
 
 .designTitle {
   font-size: large;
   margin-bottom: 10px;
-  background-color: var(--color3);
+  background-color: var(--background);
+  color: var(--headings);
 }
 
 .h-entry {
@@ -115,8 +114,8 @@ main {
 
 footer {
   display: flex;
-  background-color: var(--color1);
-  color: var(--color4);
+  background-color: var(--background);
+  color: var(--headings);
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
